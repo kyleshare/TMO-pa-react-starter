@@ -3,12 +3,8 @@ import React, { useState } from "react";
 
 function List(props) {
     const [recipeClicked, setRecipeClicked] = useState(false);
-
-    //const [recipe, setRecipe] = useState();
-
     const [recipeName, setRecipeName] = useState("None");
     const [recipeInstruction, setRecipeInstruction] = useState();
-
 
     const handleClick = () => {
         setRecipeClicked(true);
@@ -45,7 +41,7 @@ function List(props) {
         return (
             <div>
                 <p>
-                    { recipeName == "None" ? <p>There are no recipes to list</p> : <p> {recipeName} {recipeInstruction} </p> }
+                    { recipeName === "None" ? <p>There are no recipes to list</p> : <p> {recipeName} {recipeInstruction} </p> }
                     
                 </p>
                 <button onClick={handleClick}>

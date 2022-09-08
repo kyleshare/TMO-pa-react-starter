@@ -2,16 +2,6 @@ import './App.css';
 import List from './List';
 
 function App() {
-  function addRecipe(e) {
-    e.preventDefault();
-    console.log('Test');
-    return (
-      <h1>
-        Conditional render
-      </h1>
-    );
-
-  }
   return (
     <div>
       <h1 className="doNotRemoveMe">Hello world.</h1>
@@ -20,7 +10,7 @@ function App() {
       <h1>
         My Recipes
       </h1>
-      
+
       <List />
     </div>
   );
