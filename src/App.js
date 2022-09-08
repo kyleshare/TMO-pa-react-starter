@@ -1,4 +1,5 @@
 import './App.css';
+import List from './List';
 
 function App() {
   function addRecipe(e) {
@@ -19,15 +20,8 @@ function App() {
       <h1>
         My Recipes
       </h1>
-      <p>
-        There are no recipes to list.
-      </p>
-
-
-      {/* <button onClick={addRecipe}>Add Recipe</button>  */}
       
-      {/* LIST IS RENDERED IN INDEX
-      <List /> */}
+      <List />
     </div>
   );
 }

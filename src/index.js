@@ -7,7 +7,6 @@ import List from './List';
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <List />
   </React.StrictMode>,
   document.getElementById('root')
 );

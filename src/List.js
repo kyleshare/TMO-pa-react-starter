@@ -2,21 +2,31 @@ import React, { useState } from "react";
 
 
 function List(props) {
-    // when true, don't render "add recipe" button, render form
     const [recipeClicked, setRecipeClicked] = useState(false);
 
-    // replace "there are no recipes to display"
-    const [recipe, setRecipe] = useState();
+    //const [recipe, setRecipe] = useState();
+
+    const [recipeName, setRecipeName] = useState("None");
+    const [recipeInstruction, setRecipeInstruction] = useState();
+
 
     const handleClick = () => {
-        //onClick();
         setRecipeClicked(true);
     }
 
     const submitRecipe = (event) => {
         event.preventDefault();
 
-        //print stuff from form -- how?
+        const name = event.target[0].value;
+        const instruction = event.target[1].value;
+
+        setRecipeName(name);
+        setRecipeInstruction(instruction);
+
+        // do not render form
+        setRecipeClicked(false);
+
+        console.log(event);
     }
 
     if (recipeClicked) {
@@ -31,24 +41,20 @@ function List(props) {
                 <input type="submit" value="Submit Recipe" />
             </form>      
         )
+    } else {
+        return (
+            <div>
+                <p>
+                    { recipeName == "None" ? <p>There are no recipes to list</p> : <p> {recipeName} {recipeInstruction} </p> }
+                    
+                </p>
+                <button onClick={handleClick}>
+                    Add Recipe
+                </button>
+            </div>
+        );
+
     }
-
-    // if (setRecipe) {
-    //     return (
-    //         <div>
-    //             render test
-    //             {{recipe}}
-    //         </div>
-    //     )
-    // }
-
-    return (
-        <div>
-            <button onClick={handleClick}>
-                Add Recipe
-            </button>
-        </div>
-    );
 }
 
 export default List;
