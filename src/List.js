@@ -28,10 +28,10 @@ function List(props) {
     if (recipeClicked) {
         return (
             <form onSubmit={submitRecipe}>
-                <label for="recipe-name">Recipe Name: </label>
+                <label for="recipe-name">recipe-name</label>
                 <input type="text" id="recipe-name" name="recipe-name" />
                 
-                <label for="recipe-instructions">Recipe Instructions: </label>
+                <label for="recipe-instructions">recipe-instructions</label>
                 <input type="text" id="recipe-instructions" name="recipe-instructions" />
                 
                 <input type="submit" value="Submit Recipe" />
