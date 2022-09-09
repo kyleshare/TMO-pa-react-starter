@@ -41,7 +41,7 @@ function List(props) {
         return (
             <div>
                 <p>
-                    { recipeName === "None" ? <p>There are no recipes to list</p> : <p> {recipeName} {recipeInstruction} </p> }
+                    { recipeName === "None" ? <p>There are no recipes to list</p> : <li> {recipeName} {recipeInstruction} </li> }
                     
                 </p>
                 <button onClick={handleClick}>
